@@ -1,0 +1,10 @@
+<div class="editor-container">
+  <quill-editor [(ngModel)]="editorContent" [modules]="editormodules" theme="snow"
+    (onSelectionChanged)="onSelectionChanged($event)" (onContentChanged)="onContentChanged($event)">
+  </quill-editor>
+  <h2>Preview text will show the following</h2>
+  <br />
+  Body:
+  <div [innerHTML]="editorContent">
+  </div>
+</div>
